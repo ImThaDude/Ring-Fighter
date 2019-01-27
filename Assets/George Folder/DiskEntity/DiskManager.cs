@@ -39,9 +39,21 @@ public class DiskManager : MonoBehaviour {
 
 	//Correction click
 	public bool correctionClick = false;
-	
+
+	//History remember
+	public bool historyRememberBool = false;
+	public GameObject historyObject;
+	public int tempBead = 0;
+	public int mem = 0;
+
+	//History click
+	public bool historyClickBool = false;
+	public bool historyBool = false;
+
+
 	// Update is called once per frame
 	void Update () {
+
 		CurrentRotation = (CurrentRotation - (CalculateRingRotationSpeed (BPM, BeadAmount) * Time.deltaTime)) % 1f;
 
 		//
@@ -61,7 +73,11 @@ public class DiskManager : MonoBehaviour {
 			if (!correctionClick) {
 				Click ();
 			} else {
-				CorrectionClick ();
+				if (!historyClickBool) {
+					CorrectionClick ();
+				} else {
+					historyClick ();
+				}
 			}
 		}
 
@@ -74,6 +90,12 @@ public class DiskManager : MonoBehaviour {
 		if (multiBeadTestCreation) {
 			CreateMultiBeadRing ();
 			multiBeadTestCreation = false;
+		}
+
+		//
+
+		if (historyRememberBool && MultiBeadRing != null) {
+			historyRememberer ();
 		}
 
 	}
@@ -152,6 +174,40 @@ public class DiskManager : MonoBehaviour {
 			outputDamage = sectionPercentage;
 		}
 		CurrentRotation = ((dispBead - 1) * section) % 1f;
+	}
+
+	void historyRememberer() {
+		float section = CalculateSection (BeadAmount);
+		tempBead = (int) (CurrentRotation / section);
+
+		if (tempBead != mem) {
+			if (!historyBool) {
+				historyObject = MultiBeadDisplayArray [-tempBead];
+			} else {
+				historyBool = false;
+			}
+			mem = tempBead;
+		}
+
+	}
+
+	void historyClick() {
+		float section = CalculateSection (BeadAmount);
+		currDisplacement = CurrentRotation % section;
+		dispBead = (int) (CurrentRotation / section);
+		sectionPercentage = (currDisplacement / section) * 100;
+		if ((historyObject != null && -sectionPercentage < 10f) || -sectionPercentage > 90f) {
+			outputDamage = MaxDamage;
+		} else {
+			outputDamage = sectionPercentage;
+		}
+
+		if (historyObject == null) {
+			CurrentRotation = ((dispBead - 1) * section) % 1f;
+			historyBool = true;
+		} else {
+			historyObject = null;
+		}
 	}
 
 }
