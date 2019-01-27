@@ -213,6 +213,34 @@ MonoBehaviour:
   Singnaler: {fileID: 1177184810474814, guid: eaf984bdf087c6648bf5376b98741c7e, type: 2}
   Length: 1
   testCreation: 0
+  MaxDamage: 100
+  currDamage: 0
+  currDisplacement: 0
+  dispBead: 0
+  sectionPercentage: 0
+  outputDamage: 0
+  MultiBeadArray:
+  - {fileID: 1799497332462846, guid: d8d461494eeb9ec43bda705a97baa7f0, type: 2}
+  - {fileID: 1799497332462846, guid: d8d461494eeb9ec43bda705a97baa7f0, type: 2}
+  - {fileID: 1882536108996718, guid: 3c793ad505fb22b408aabba567cbb633, type: 2}
+  - {fileID: 1882536108996718, guid: 3c793ad505fb22b408aabba567cbb633, type: 2}
+  - {fileID: 1799497332462846, guid: d8d461494eeb9ec43bda705a97baa7f0, type: 2}
+  - {fileID: 1882536108996718, guid: 3c793ad505fb22b408aabba567cbb633, type: 2}
+  - {fileID: 1882536108996718, guid: 3c793ad505fb22b408aabba567cbb633, type: 2}
+  - {fileID: 1799497332462846, guid: d8d461494eeb9ec43bda705a97baa7f0, type: 2}
+  - {fileID: 1608530461423464, guid: 359b45d628a48de40b949492b8e5cdca, type: 2}
+  - {fileID: 1882536108996718, guid: 3c793ad505fb22b408aabba567cbb633, type: 2}
+  MultiBeadSignaler: {fileID: 1177184810474814, guid: eaf984bdf087c6648bf5376b98741c7e,
+    type: 2}
+  MultiBeadLength: 1
+  multiBeadTestCreation: 0
+  correctionClick: 0
+  historyRememberBool: 0
+  historyObject: {fileID: 0}
+  tempBead: 0
+  mem: 0
+  historyClickBool: 0
+  historyBool: 0
 --- !u!4 &327051667
 Transform:
   m_ObjectHideFlags: 0
@@ -335,8 +363,31 @@ MonoBehaviour:
   BeadAmount: 5
   BeadAsset: {fileID: 1690736865962584, guid: 59394c0d76d39f84c9ddd08bb85e23e6, type: 2}
   Singnaler: {fileID: 1177184810474814, guid: eaf984bdf087c6648bf5376b98741c7e, type: 2}
-  Length: 1
+  Length: 2
   testCreation: 0
+  MaxDamage: 100
+  currDamage: 0
+  currDisplacement: 0
+  dispBead: 0
+  sectionPercentage: 0
+  outputDamage: 0
+  MultiBeadArray:
+  - {fileID: 1799497332462846, guid: d8d461494eeb9ec43bda705a97baa7f0, type: 2}
+  - {fileID: 1882536108996718, guid: 3c793ad505fb22b408aabba567cbb633, type: 2}
+  - {fileID: 1799497332462846, guid: d8d461494eeb9ec43bda705a97baa7f0, type: 2}
+  - {fileID: 1882536108996718, guid: 3c793ad505fb22b408aabba567cbb633, type: 2}
+  - {fileID: 1608530461423464, guid: 359b45d628a48de40b949492b8e5cdca, type: 2}
+  MultiBeadSignaler: {fileID: 1177184810474814, guid: eaf984bdf087c6648bf5376b98741c7e,
+    type: 2}
+  MultiBeadLength: 1
+  multiBeadTestCreation: 1
+  correctionClick: 1
+  historyRememberBool: 1
+  historyObject: {fileID: 0}
+  tempBead: 0
+  mem: 0
+  historyClickBool: 1
+  historyBool: 0
 --- !u!4 &583966249
 Transform:
   m_ObjectHideFlags: 0
@@ -382,8 +433,46 @@ MonoBehaviour:
   BeadAmount: 20
   BeadAsset: {fileID: 1690736865962584, guid: 59394c0d76d39f84c9ddd08bb85e23e6, type: 2}
   Singnaler: {fileID: 1177184810474814, guid: eaf984bdf087c6648bf5376b98741c7e, type: 2}
-  Length: 1
+  Length: 2
   testCreation: 0
+  MaxDamage: 100
+  currDamage: 0
+  currDisplacement: 0
+  dispBead: 0
+  sectionPercentage: 0
+  outputDamage: 0
+  MultiBeadArray:
+  - {fileID: 1799497332462846, guid: d8d461494eeb9ec43bda705a97baa7f0, type: 2}
+  - {fileID: 1882536108996718, guid: 3c793ad505fb22b408aabba567cbb633, type: 2}
+  - {fileID: 1799497332462846, guid: d8d461494eeb9ec43bda705a97baa7f0, type: 2}
+  - {fileID: 1882536108996718, guid: 3c793ad505fb22b408aabba567cbb633, type: 2}
+  - {fileID: 1799497332462846, guid: d8d461494eeb9ec43bda705a97baa7f0, type: 2}
+  - {fileID: 1882536108996718, guid: 3c793ad505fb22b408aabba567cbb633, type: 2}
+  - {fileID: 1799497332462846, guid: d8d461494eeb9ec43bda705a97baa7f0, type: 2}
+  - {fileID: 1882536108996718, guid: 3c793ad505fb22b408aabba567cbb633, type: 2}
+  - {fileID: 1799497332462846, guid: d8d461494eeb9ec43bda705a97baa7f0, type: 2}
+  - {fileID: 1882536108996718, guid: 3c793ad505fb22b408aabba567cbb633, type: 2}
+  - {fileID: 1799497332462846, guid: d8d461494eeb9ec43bda705a97baa7f0, type: 2}
+  - {fileID: 1799497332462846, guid: d8d461494eeb9ec43bda705a97baa7f0, type: 2}
+  - {fileID: 1799497332462846, guid: d8d461494eeb9ec43bda705a97baa7f0, type: 2}
+  - {fileID: 1799497332462846, guid: d8d461494eeb9ec43bda705a97baa7f0, type: 2}
+  - {fileID: 1882536108996718, guid: 3c793ad505fb22b408aabba567cbb633, type: 2}
+  - {fileID: 1882536108996718, guid: 3c793ad505fb22b408aabba567cbb633, type: 2}
+  - {fileID: 1882536108996718, guid: 3c793ad505fb22b408aabba567cbb633, type: 2}
+  - {fileID: 1882536108996718, guid: 3c793ad505fb22b408aabba567cbb633, type: 2}
+  - {fileID: 1608530461423464, guid: 359b45d628a48de40b949492b8e5cdca, type: 2}
+  - {fileID: 1882536108996718, guid: 3c793ad505fb22b408aabba567cbb633, type: 2}
+  MultiBeadSignaler: {fileID: 1177184810474814, guid: eaf984bdf087c6648bf5376b98741c7e,
+    type: 2}
+  MultiBeadLength: 1
+  multiBeadTestCreation: 0
+  correctionClick: 0
+  historyRememberBool: 0
+  historyObject: {fileID: 0}
+  tempBead: 0
+  mem: 0
+  historyClickBool: 0
+  historyBool: 0
 --- !u!4 &797291238
 Transform:
   m_ObjectHideFlags: 0
